@@ -1,4 +1,4 @@
-// Last updated: 10/26/2025, 10:32:01 PM
+// Last updated: 10/26/2025, 10:32:35 PM
 class Solution {
     public int pivotIndex(int[] nums) {
         int total=0;
