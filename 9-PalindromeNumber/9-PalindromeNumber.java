@@ -1,4 +1,4 @@
-// Last updated: 10/26/2025, 10:29:57 PM
+// Last updated: 10/26/2025, 10:33:17 PM
 class Solution {
     public boolean isPalindrome(int x) {
         int rev=0;
