@@ -1,7 +1,7 @@
-// Last updated: 10/26/2025, 10:32:57 PM
+// Last updated: 11/20/2025, 3:01:02 PM
 class Solution {
     public int maxProfit(int[] prices) {
-        int min=Integer.MAX_VALUE;
+        int min=9999999;
         int max=0;
         for(int price:prices){
             if(price<min){
