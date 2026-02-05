@@ -1,18 +1,18 @@
-// Last updated: 2/5/2026, 3:05:42 PM
+// Last updated: 2/5/2026, 3:06:58 PM
 1class Solution {
-2    public boolean isAnagram(String s, String t) {
-3        HashMap<Character,Integer>ang=new HashMap<>();
-4        for(char i:s.toCharArray()){
-5            ang.merge(i,1,Integer::sum);
-6        }
-7        for(char i:t.toCharArray()){
-8            ang.merge(i,-1,Integer::sum);
-9        }
-10        for(int i:ang.values()){
-11            if(i!=0){
-12                return false;
+2    public int majorityElement(int[] nums) {
+3        int count=0;
+4        for(int i=0;i<nums.length;i++){
+5            count=0;
+6            for(int j=0;j<nums.length;j++){
+7                if(nums[i]==nums[j]){
+8                    count++;
+9                }
+10            }
+11            if(count>nums.length/2){
+12                return nums[i];
 13            }
 14        }
-15        return true;
+15       return -1;
 16    }
 17}
