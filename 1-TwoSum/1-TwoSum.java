@@ -1,4 +1,4 @@
-// Last updated: 2/5/2026, 2:37:55 PM
+// Last updated: 2/7/2026, 11:56:45 PM
 1class Solution {
 2    public int[] twoSum(int[] nums, int target) {
 3        HashMap<Integer,Integer> map=new HashMap<>();
@@ -11,5 +11,6 @@
 10            map.put(nums[i], i);
 11        }
 12        return new int[]{};
-13    }
+13                                                                                                                }
 14}
+15
