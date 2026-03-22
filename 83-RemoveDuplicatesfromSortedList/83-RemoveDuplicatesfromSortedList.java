@@ -1,4 +1,4 @@
-// Last updated: 2/18/2026, 9:54:41 PM
+// Last updated: 3/22/2026, 12:45:07 PM
 1/**
 2 * Definition for singly-linked list.
 3 * public class ListNode {
@@ -11,15 +11,15 @@
 10 */
 11class Solution {
 12    public ListNode deleteDuplicates(ListNode head) {
-13       ListNode temp=head;
-14       while(temp!=null && temp.next!=null){
-15        if(temp.val==temp.next.val){
-16            temp.next=temp.next.next;
+13      ListNode list=head;
+14      while(list!=null && list.next!=null){
+15        if(list.val==list.next.val){
+16            list.next=list.next.next;
 17        }
 18        else{
-19            temp=temp.next;
+19        list=list.next;
 20        }
-21       } 
-22       return head;
+21      }
+22      return head;
 23    }
 24}
