@@ -1,4 +1,4 @@
-// Last updated: 5/17/2026, 7:33:13 PM
+// Last updated: 5/17/2026, 8:14:43 PM
 1/**
 2 * Definition for a binary tree node.
 3 * public class TreeNode {
@@ -15,18 +15,19 @@
 14 * }
 15 */
 16class Solution {
-17    public boolean isSameTree(TreeNode p, TreeNode q) {
-18        if(p==null && q==null){
-19            return true;
-20        }
-21        if(p==null || q==null){
-22            return false;
+17    public int sumNumbers(TreeNode root) {
+18        return findsum(root,0);
+19    }
+20    public int findsum(TreeNode root,int current){
+21        if(root==null){
+22            return 0;
 23        }
-24        if(p.val != q.val){
-25            return false;
-26        }
-27        boolean left=isSameTree(p.left,q.left);
-28        boolean right=isSameTree(p.right,q.right);
-29        return left && right;
-30    }
-31}
+24        current=current*10+root.val;
+25        if(root.left==null && root.right==null){
+26            return current;
+27        }
+28        int leftsum=findsum(root.left,current);
+29        int rightsum=findsum(root.right,current);
+30        return leftsum+rightsum;
+31    }
+32}
